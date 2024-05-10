@@ -172,12 +172,12 @@ display: block;
     <div id="firstnav">
         <div id="firstnav1">
 
-            <div onclick='window.location.href="http://localhost:9090/public/shop.html"'>shop</div>
-            <div onclick='window.location.href="http://localhost:9090/public/about.html"'>About us</div>
-            <div onclick='window.location.href="http://localhost:9090/public/blog.html"'>Blog</div>
+            <div onclick='window.location.href="https://pensive-gallant-pasteur.cidemo.co/public/shop.html"'>shop</div>
+            <div onclick='window.location.href="https://pensive-gallant-pasteur.cidemo.co/public/about.html"'>About us</div>
+            <div onclick='window.location.href="https://pensive-gallant-pasteur.cidemo.co/public/blog.html"'>Blog</div>
             <div>Contact</div>
         </div>
-        <div onclick='window.location.href="http://localhost:9090/public/index.html"' id="firstnav2">
+        <div onclick='window.location.href="https://pensive-gallant-pasteur.cidemo.co/public/index.html"' id="firstnav2">
             CHAMPION
         </div>
         <div id="firstnav3">
@@ -185,12 +185,12 @@ display: block;
                 <i style="font-size: 20px;" class="fa-regular fa-user"></i>
                 <div id="userHoverOption">
                     <div id="customerSignup"
-                        onclick="window.location.href='http://localhost:9090/public/customerSign.html'">Customer Signup
+                        onclick="window.location.href='https://pensive-gallant-pasteur.cidemo.co/public/customerSign.html'">Customer Signup
                     </div>
                     <div id="customerLogin"
-                        onclick="window.location.href='http://localhost:9090/public/customerLogin.html'">Customer Login
+                        onclick="window.location.href='https://pensive-gallant-pasteur.cidemo.co/public/customerLogin.html'">Customer Login
                     </div>
-                    <div id="adminLogin" onclick="window.location.href='http://localhost:9090/public/adminLogin.html'">
+                    <div id="adminLogin" onclick="window.location.href='https://pensive-gallant-pasteur.cidemo.co/public/adminLogin.html'">
                         Admin Login</div>
                 </div>
             </div>
@@ -257,7 +257,7 @@ let eventy = []
 
 window.addEventListener("load", async () => {
     try {
-        let ans = await fetch("http://localhost:9090/current", {
+        let ans = await fetch("https://pensive-gallant-pasteur.cidemo.co/current", {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'
@@ -292,7 +292,7 @@ document.addEventListener('click', async function (e) {
 });
 
 async function storePost(events) {
-    let eventUrl = "http://localhost:9090/event"
+    let eventUrl = "https://pensive-gallant-pasteur.cidemo.co/event"
     await fetch(eventUrl, {
         method: 'POST',
         headers: {

@@ -170,7 +170,7 @@
             <button class="cross" onclick="this.parentElement.style.display='none'"><i
                     class="fa-solid fa-xmark"></i></button>
             <p><i class="fa-solid fa-check" style="color: green;"></i> Item is Added to Cart</p>
-            <button class="ck" onclick="window.location.href='http://localhost:9090/public/payPage.html'">Checkout <i
+            <button class="ck" onclick="window.location.href='https://pensive-gallant-pasteur.cidemo.co/public/payPage.html'">Checkout <i
                     class="fa-solid fa-chevron-right"></i></button>
         </div>
 
@@ -184,7 +184,7 @@ let reqId = new URLSearchParams(window.location.search)
     let id = reqId.get('id').split("=")
     // console.log("url",window.location.search)
     // console.log(id[1]);
-    let url = `http://localhost:9090/product/${id[1]}`
+    let url = `https://pensive-gallant-pasteur.cidemo.co/product/${id[1]}`
     // console.log("real url",url);
     async function get() {
         let ans = await fetch(url, {

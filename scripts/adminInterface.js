@@ -2,7 +2,7 @@ window.onload = async () => {
     let data = JSON.parse(sessionStorage.getItem("adminObj"))
     // let id=sessionStorage.getItem(JSON.parse(adminObj))
     // console.log(id);
-    let url = `http://localhost:9090/admin/${data.id}`
+    let url = `https://pensive-gallant-pasteur.cidemo.co/admin/${data.id}`
     try {
         let res = await fetch(url, {
             method: 'GET',
@@ -35,7 +35,7 @@ document.querySelector("#subOther1").addEventListener("click", () => {
 
 
 document.querySelector("#submitCat").addEventListener("click", async () => {
-    let url = "http://localhost:9090/category"
+    let url = "https://pensive-gallant-pasteur.cidemo.co/category"
     let name = document.querySelector("#category").value
     let obj = { name }
     let data = JSON.parse(sessionStorage.getItem("adminObj"))
@@ -123,7 +123,7 @@ document.querySelector("#subOther3").addEventListener("click", async () => {
     <div id="fixed"></div>
     `
 
-    let url = 'http://localhost:9090/product/all'
+    let url = 'https://pensive-gallant-pasteur.cidemo.co/product/all'
     let res = await fetch(url, {
         method: 'GET',
         headers: {
@@ -204,7 +204,7 @@ document.querySelector("#subOther4").addEventListener("click", async () => {
     <div id="fixed"></div>
     `
     let data = JSON.parse(sessionStorage.getItem("adminObj"))
-    let url = `http://localhost:9090/product/?admin=${data.admin}`
+    let url = `https://pensive-gallant-pasteur.cidemo.co/product/?admin=${data.admin}`
     let res = await fetch(url, {
         method: 'GET',
         headers: {
@@ -258,7 +258,7 @@ document.querySelector("#subOther5").addEventListener("click", async () => {
     document.querySelector("#addCategory").style.display = 'none'
     document.querySelector("#addProduct").style.display = 'none'
     document.querySelector("#allProduct").style.display = 'none'
-    let visitorUrl = "http://localhost:9090/visitor"
+    let visitorUrl = "https://pensive-gallant-pasteur.cidemo.co/visitor"
 
     let res = await fetch(visitorUrl, {
         method: 'GET',
@@ -302,7 +302,7 @@ async function display(ans) {
 async function visitorClicked() {
 
     let id = this.id
-    window.location.href = `http://localhost:9090/public/tracker.html?id=${id}`
+    window.location.href = `https://pensive-gallant-pasteur.cidemo.co/public/tracker.html?id=${id}`
     
 
 

@@ -13,7 +13,7 @@
 
 
 let gt= async()=>{
-    let mainUrl="http://localhost:9090/product/all"
+    let mainUrl="https://pensive-gallant-pasteur.cidemo.co/product/all"
     let ans= await fetch(mainUrl,{
         method:'GET',
         headers:{
@@ -61,7 +61,7 @@ let eventy = []
 
 window.addEventListener("load", async () => {
     try {
-        let ans = await fetch("http://localhost:9090/current", {
+        let ans = await fetch("https://pensive-gallant-pasteur.cidemo.co/current", {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'
@@ -96,7 +96,7 @@ document.addEventListener('click', async function (e) {
 });
 
 async function storePost(events) {
-    let eventUrl = "http://localhost:9090/event"
+    let eventUrl = "https://pensive-gallant-pasteur.cidemo.co/event"
     await fetch(eventUrl, {
         method: 'POST',
         headers: {
@@ -206,7 +206,7 @@ document.querySelector("#price1").addEventListener("click",async()=>{
    
    
    
-    let url="http://localhost:9090/product/sort/lowToHighPrice"
+    let url="https://pensive-gallant-pasteur.cidemo.co/product/sort/lowToHighPrice"
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -246,7 +246,7 @@ document.querySelector("#price2").addEventListener("click",async ()=>{
 
 
 
-    let url='http://localhost:9090/product/sort/highToLowPrice'
+    let url='https://pensive-gallant-pasteur.cidemo.co/product/sort/highToLowPrice'
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -291,7 +291,7 @@ document.querySelector("#rate1").addEventListener("click",async ()=>{
 
 
 
-    let url='http://localhost:9090/product/sort/lowToHighRating'
+    let url='https://pensive-gallant-pasteur.cidemo.co/product/sort/lowToHighRating'
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -332,7 +332,7 @@ document.querySelector("#rate2").addEventListener("click",async ()=>{
 
 
 
-    let url='http://localhost:9090/product/sort/highToLowRating'
+    let url='https://pensive-gallant-pasteur.cidemo.co/product/sort/highToLowRating'
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -371,7 +371,7 @@ document.querySelector("#cat1").addEventListener("click",async ()=>{
         visitorId: visitorId
     })
 
-    let url='http://localhost:9090/product/category/965539645056974849'
+    let url='https://pensive-gallant-pasteur.cidemo.co/product/category/965539645056974849'
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -409,7 +409,7 @@ document.querySelector("#cat2").addEventListener("click",async ()=>{
         visitorId: visitorId
     })
 
-    let url='http://localhost:9090/product/category/965539687538950145'
+    let url='https://pensive-gallant-pasteur.cidemo.co/product/category/965539687538950145'
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -448,7 +448,7 @@ document.querySelector("#cat3").addEventListener("click",async ()=>{
     })
 
 
-    let url='http://localhost:9090/product/category/965540062779015169'
+    let url='https://pensive-gallant-pasteur.cidemo.co/product/category/965540062779015169'
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -487,7 +487,7 @@ document.querySelector("#sort1").addEventListener("click",async ()=>{
         visitorId: visitorId
     })
 
-    let url='http://localhost:9090/product/sort/AtoZ'
+    let url='https://pensive-gallant-pasteur.cidemo.co/product/sort/AtoZ'
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -526,7 +526,7 @@ document.querySelector("#sort2").addEventListener("click",async ()=>{
         visitorId: visitorId
     })
 
-    let url='http://localhost:9090/product//sort/ZtoA'
+    let url='https://pensive-gallant-pasteur.cidemo.co/product//sort/ZtoA'
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -569,8 +569,8 @@ document.querySelector("#sort2").addEventListener("click",async ()=>{
 
 async function productPage(){
     let ans= this.id
-    window.location.href=`http://localhost:9090/public/product.html?id=${ans}`
-    //  =`http://localhost:9090/product/${ans}`
+    window.location.href=`https://pensive-gallant-pasteur.cidemo.co/public/product.html?id=${ans}`
+    //  =`https://pensive-gallant-pasteur.cidemo.co/product/${ans}`
 }
 
 

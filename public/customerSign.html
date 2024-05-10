@@ -91,7 +91,7 @@
     let email = document.querySelector("#email").value
     let password = document.querySelector("#pass").value
     let obj = { name, email, password }
-    let url = "http://localhost:9090/customer"
+    let url = "https://pensive-gallant-pasteur.cidemo.co/customer"
     let res = await fetch(url, {
       method: 'POST',
       headers: {
@@ -102,9 +102,9 @@
 
     console.log(res);
     if (res.ok) {
-      // window.location.href = 'http://localhost:9090/public/customerInterface.html'
+      // window.location.href = 'https://pensive-gallant-pasteur.cidemo.co/public/customerInterface.html'
 
-      let lurl = "http://localhost:9090/customer/login"
+      let lurl = "https://pensive-gallant-pasteur.cidemo.co/customer/login"
       var lres = await fetch(lurl, {
         method: 'POST',
         headers: {
@@ -117,7 +117,7 @@
      console.log(lres);
       if(lres){
         sessionStorage.setItem("customerObj" ,JSON.stringify(lres))
-        window.location.href = `http://localhost:9090/public/customerInterface.html?id=${lres.id}`
+        window.location.href = `https://pensive-gallant-pasteur.cidemo.co/public/customerInterface.html?id=${lres.id}`
       }
 
 

@@ -30,7 +30,7 @@
             width: 350px;
             /* border: 2px solid red; */
             color: white;
-            background-image: url("http://localhost:9090/images/cropedmonth.jpg");
+            background-image: url("https://pensive-gallant-pasteur.cidemo.co/images/cropedmonth.jpg");
         }
 
         #left>div>button {
@@ -263,12 +263,12 @@ display: block;
 <div id="firstnav">
     <div id="firstnav1">
 
-        <div onclick='window.location.href="http://localhost:9090/public/shop.html"'>shop</div>
-        <div onclick='window.location.href="http://localhost:9090/public/about.html"'>About us</div>
-        <div onclick='window.location.href="http://localhost:9090/public/blog.html"'>Blog</div>
+        <div onclick='window.location.href="https://pensive-gallant-pasteur.cidemo.co/public/shop.html"'>shop</div>
+        <div onclick='window.location.href="https://pensive-gallant-pasteur.cidemo.co/public/about.html"'>About us</div>
+        <div onclick='window.location.href="https://pensive-gallant-pasteur.cidemo.co/public/blog.html"'>Blog</div>
         <div>Contact</div>
     </div>
-    <div onclick='window.location.href="http://localhost:9090/public/index.html"' id="firstnav2">
+    <div onclick='window.location.href="https://pensive-gallant-pasteur.cidemo.co/public/index.html"' id="firstnav2">
         CHAMPION
     </div>
     <div id="firstnav3">
@@ -276,12 +276,12 @@ display: block;
             <i style="font-size: 20px;" class="fa-regular fa-user"></i>
             <div id="userHoverOption">
                 <div id="customerSignup"
-                    onclick="window.location.href='http://localhost:9090/public/customerSign.html'">Customer Signup
+                    onclick="window.location.href='https://pensive-gallant-pasteur.cidemo.co/public/customerSign.html'">Customer Signup
                 </div>
                 <div id="customerLogin"
-                    onclick="window.location.href='http://localhost:9090/public/customerLogin.html'">Customer Login
+                    onclick="window.location.href='https://pensive-gallant-pasteur.cidemo.co/public/customerLogin.html'">Customer Login
                 </div>
-                <div id="adminLogin" onclick="window.location.href='http://localhost:9090/public/adminLogin.html'">
+                <div id="adminLogin" onclick="window.location.href='https://pensive-gallant-pasteur.cidemo.co/public/adminLogin.html'">
                     Admin Login</div>
             </div>
         </div>
@@ -340,7 +340,7 @@ display: block;
     let ur = new URLSearchParams(window.location.search)
     let id = ur.get('id')
     let gt= async()=>{
-    let mainUrl=`http://localhost:9090/product/category/${id}`
+    let mainUrl=`https://pensive-gallant-pasteur.cidemo.co/product/category/${id}`
     let ans= await fetch(mainUrl,{
         method:'GET',
         headers:{
@@ -388,7 +388,7 @@ let eventy = []
 
 window.addEventListener("load", async () => {
     try {
-        let ans = await fetch("http://localhost:9090/current", {
+        let ans = await fetch("https://pensive-gallant-pasteur.cidemo.co/current", {
             method: 'GET',
             headers: {
                 'content-type': 'application/json'
@@ -423,7 +423,7 @@ document.addEventListener('click', async function (e) {
 });
 
 async function storePost(events) {
-    let eventUrl = "http://localhost:9090/event"
+    let eventUrl = "https://pensive-gallant-pasteur.cidemo.co/event"
     await fetch(eventUrl, {
         method: 'POST',
         headers: {
@@ -489,7 +489,7 @@ document.querySelector("#price1").addEventListener("click",async()=>{
 
 
 
-    let url=`http://localhost:9090/product/category/${id}/price/asc`
+    let url=`https://pensive-gallant-pasteur.cidemo.co/product/category/${id}/price/asc`
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -525,7 +525,7 @@ document.querySelector("#price2").addEventListener("click",async ()=>{
         visitorId: visitorId
     })
 
-    let url=`http://localhost:9090/product/category/${id}/price/desc`
+    let url=`https://pensive-gallant-pasteur.cidemo.co/product/category/${id}/price/desc`
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -567,7 +567,7 @@ document.querySelector("#rate1").addEventListener("click",async ()=>{
         visitorId: visitorId
     })
 
-    let url=`http://localhost:9090/product/category/${id}/rate/asc`
+    let url=`https://pensive-gallant-pasteur.cidemo.co/product/category/${id}/rate/asc`
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -607,7 +607,7 @@ document.querySelector("#rate2").addEventListener("click",async ()=>{
 
 
 
-    let url=`http://localhost:9090/product/category/${id}/rate/desc`
+    let url=`https://pensive-gallant-pasteur.cidemo.co/product/category/${id}/rate/desc`
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -642,7 +642,7 @@ document.querySelector("#sort1").addEventListener("click",async ()=>{
         visitorId: visitorId
     })
 
-    let url=`http://localhost:9090/product/category/${id}/sort/asc`
+    let url=`https://pensive-gallant-pasteur.cidemo.co/product/category/${id}/sort/asc`
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -680,7 +680,7 @@ document.querySelector("#sort2").addEventListener("click",async ()=>{
         visitorId: visitorId
     })
 
-    let url=`http://localhost:9090/product/category/${id}/sort/desc`
+    let url=`https://pensive-gallant-pasteur.cidemo.co/product/category/${id}/sort/desc`
     let ans= await fetch(url,{
         method:'GET',
         headers:{
@@ -723,7 +723,7 @@ document.querySelector("#sort2").addEventListener("click",async ()=>{
 
 async function productPage(){
     let ans= this.id
-    window.location.href=`http://localhost:9090/public/product.html?id=${ans}`
+    window.location.href=`https://pensive-gallant-pasteur.cidemo.co/public/product.html?id=${ans}`
     //  =`http://localhost:5050/product/${ans}`
 }
 

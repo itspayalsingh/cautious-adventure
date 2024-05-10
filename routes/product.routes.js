@@ -177,7 +177,7 @@ productRouter.get("/category/:id/sort/desc", async (req, res) => {
 productRouter.post("/", imgUpload , authentication, rateAd, async (req, res) => {
     // console.log(req.body);
     try {
-        const image1 = `http://localhost:9090/images/${req.file.filename}`
+        const image1 = `https://pensive-gallant-pasteur.cidemo.co/images/${req.file.filename}`
         req.body.image = image1
         console.log(req.body);
         await productModel.create(req.body)
